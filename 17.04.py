@@ -1,7 +1,7 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 
 
-# def a():
+# def f_1():
 #     im = Image.open('надо.webp')
 #     im.show()
 #     print('размер', im._size)
@@ -9,19 +9,44 @@ from PIL import Image
 #     print('цветовая модель', im.mode)
 #
 #
-# a()
+# f_1()
 
 
-# noinspection PyTypeChecker
-def b():
-    im = Image.open('надо.webp')
-    a = int(im.width // 3)
-    im.resize_width_proportionally(a)
-    c = int(im.height // 3)
-    im.resize_height_proportionally(c)
-    im.show()
-    im_f_g = im.transpose(Image.flip_right_left)
-    im_f_g.show()
+# # noinspection PyTypeChecker
+# def f_2():
+#     im = Image.open("надо.webp")
+#     a = int(im.width) // 3
+#     c = int(im.height) // 3
+#     im_n = im.resize((a, c))
+#     im_n.show()
+#     im_n.save("изм.jpg")
+#     img1 = im_n.transpose(Image.FLIP_TOP_BOTTOM)
+#     img1.show()
+#     im_n.save("горизонтальный.jpg")
+#     img2 = im_n.transpose(Image.FLIP_RIGHT_LEFT)
+#     img2.show()
+#     im_n.save("вертикальный.jpg")
+#
+#
+# f_2()
 
 
-b()
+# def f_3():
+#     im = '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'
+#     for im_n in im:
+#         img = Image.open(im_n)
+#         im_f = img.filter(ImageFilter.FIND_EDGES)
+#         im_f.show()
+#
+# f_3()
+
+
+def f4():
+    im = "надо.webp"
+    im_w = im
+    im_w.drawstring()
+    im_w.show()
+    im_w.save("new")
+
+
+f4()
